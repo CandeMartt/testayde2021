@@ -8,15 +8,35 @@
 
 def funcion_edades():
     try:
-        dato_1 = int(input("Ingrese la cantidad de personas "))   
+        persona = int(input("Ingrese la cantidad de personas "))   
         i = 1
         acum = 0
-        while i<= dato_1:
-            dato_2 = int(input(f"Ingrese la edad de {i}.  "))
+        while i <= persona:
+            edad = int(input(f"Ingrese la edad de {i}.  "))
             i += 1
-            acum += dato_2
-        for i in acum+1:
-            if i > acum:
-                print(f"La edad {i} es mayor")  
+            print(f"Las edad mayor es { edad > i}")
+
     except:
         print("ERROR.")    
+
+def ordenar_edades():
+    while True:
+        try:
+            personas = int(input('Ingrese la cantidad de personas: '))
+            break
+        except:
+            print("Ingrese un numero")
+
+    edades = []
+    for i in range(personas):
+        while True:
+            try:
+                edadesingresadas = int(input(f'Ingrese la edad de la persona #{i+1}: '))
+                edades.append(edadesingresadas)
+                break
+            except:
+                print("Ingrese un numero")
+        
+    edades.sort()
+    print(f'La edad mayor ingresada es {edades[-1]}\nLa lista completa es: {edades}')
+
