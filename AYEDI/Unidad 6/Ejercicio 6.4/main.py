@@ -30,7 +30,7 @@ Por favor ingrese la opcion que desee utilizar
     1. Crear vehiculo
     2. Listar autos (presentación y tipo)
     3. Cambiar velocidades
-    4. 
+    4. Carcular tiempo de viaje
     5. 
     6. Salir
 Numero: """)
