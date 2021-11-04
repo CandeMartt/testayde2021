@@ -11,7 +11,7 @@ import Empleados as em
 import Animal as an
 lista_empleados = []
 lista_animales = []
-lista_animales_a_cuidar = []
+
 
 class GestorZoo:
     def crear_instancia_empleado(self):
@@ -31,7 +31,7 @@ class GestorZoo:
 
         nombre = input("Ingrese el nombre: ")
         apellido = input("Ingrese el apellido: ")
-        nombre_instancia = em.Empleados(legajo,nombre,apellido, lista_animales_a_cuidar)
+        nombre_instancia = em.Empleados(legajo,nombre,apellido, lista_animales_a_cuidar = [])
         lista_empleados.append(nombre_instancia)
         
     
@@ -63,17 +63,15 @@ class GestorZoo:
             if encargado_num.isdigit():
                 flag = True
                 for i in lista_empleados:
-                    if encargado_num != i.get_legajo():
-                        print("El legajo no existe")
+                    if encargado_num == i.get_legajo():
+                        encargado_cuidar = i.get_legajo()
                         flag = False
-                    else:
-                        if encargado_num == i.get_legajo():
-                            encargado_cuidar = i.get_legajo()
-                            print("Legajo valido") 
-                            break
-                if flag:
+                if flag == False:
+                    print("Valido")
+                    print(encargado_cuidar)
                     break
-                break    
+                else:
+                    print("Legajo invalido")    
             else:
                 print("El legajo debe se numerico")
                 
@@ -84,23 +82,52 @@ class GestorZoo:
 
         if condicion == "1":
             nombre_instancia = an.Animal(nombre,tipo_animal,fecha_nacimiento,encargado_cuidar)
+            lista_animales.append(nombre_instancia)
+            for i in lista_empleados:
+                if encargado_num == i.get_legajo():
+                    i.asignar_animales(nombre_instancia)
         elif condicion == "2":
             nombre_instancia = an.AnimalesEnjaulados(nombre,tipo_animal,fecha_nacimiento,encargado_cuidar)
+            lista_animales.append(nombre_instancia)
+            for i in lista_empleados:
+                if encargado_num == i.get_legajo():
+                    i.asignar_animales(nombre_instancia)
         elif condicion == "3":
             nombre_instancia = an.AnimalesSueltos(nombre,tipo_animal,fecha_nacimiento,encargado_cuidar)
-        
-        if condicion == "4":
+            lista_animales.append(nombre_instancia)
+            for i in lista_empleados:
+                if encargado_num == i.get_legajo():
+                    i.asignar_animales(nombre_instancia)
+        elif condicion == "4":
             nombre_instancia = an.AnimalesAcuaticos(nombre,tipo_animal,fecha_nacimiento,encargado_cuidar)
+            lista_animales.append(nombre_instancia)
+            for i in lista_empleados:
+                if encargado_num == i.get_legajo():
+                    i.asignar_animales(nombre_instancia)
 
-        lista_animales.append(nombre_instancia)
-        lista_animales_a_cuidar.append(nombre_instancia)
 
     def imprimir_animales(self):
         for i in lista_animales:
             i.presentar_animal()
             i.tipo_objeto()
 
+    def cambiar_de_encargado(self):
+        self.imprimir_empleados()
+        while True:
+            encar_cuidar = input("Ingrese el legajo del empleado a cambiar: ")
+            if encar_cuidar.isdigit():
+                flag = True
+                for i in lista_animales:
+                    if encar_cuidar != i.get_encargado_cuidar():
+                       print("Ese Nº de legajo no existe.")
+                    flag = False
+                    break
+                if (flag == True):
+                    
+                    """nuevo_encargado_cuidar = input(("Ingrese el Nº legajo por el que quiere cambiarlo"))
+                    for i in lista_animales:
+                        i.set_empleado(nuevo_encargado_cuidar)
+                        print("Cambio realizado")
+                        break
+                break"""
 
-
-        
-        

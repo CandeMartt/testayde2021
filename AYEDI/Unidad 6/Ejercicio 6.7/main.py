@@ -27,16 +27,16 @@ gestor = gz.GestorZoo()
 while True:
     opcion = input(
     """
------------Menu principal-----------
+-----------MENU PRINCIPAL-----------
 Por favor ingrese una opcion:
     1. Crear Empleado
     2. Crear Animal
     3. 
-    4. 
+    4. Cambiar de empleado
     5. Imprimir Empleado
     6. Imprimir Animal
     7. Salir
-    Opcion: """
+Numero: """
     )
     if (opcion=="1"):
         gestor.crear_instancia_empleado()
@@ -45,7 +45,7 @@ Por favor ingrese una opcion:
     elif (opcion=="3"):
         pass
     elif (opcion=="4"):
-        pass
+        gestor.cambiar_de_encargado()
     elif (opcion=="5"):
         gestor.imprimir_empleados()
     elif (opcion=="6"):

@@ -16,11 +16,14 @@ class Animal:
     def tipo_objeto(self):
         print("Animal tipo", type(self).__name__)
 
+    def get_encargado_cuidar(self):
+        return self.encargado_cuidar
+        
     def set_empleado(self,encargado_cuidar):
         self.encargado_cuidar = encargado_cuidar
 
     def presentar_animal(self):
-        print(f"Nombre: {self.nombre}, Tpo de anima {self.tipo_animal} Fecha de Nacimiento: {self.fecha_nacimiento}")
+        print(f"Nombre: {self.nombre}, Tpo de anima {self.tipo_animal} Fecha de Nacimiento: {self.fecha_nacimiento} Encargado a cuidar legajo Nº: {self.encargado_cuidar}")
 class AnimalesEnjaulados(Animal):
     pass
 
