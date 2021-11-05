@@ -14,6 +14,7 @@ lista_animales = []
 
 
 class GestorZoo:
+    #funcion crear empleado
     def crear_instancia_empleado(self):
         while True: #pide legajo
             legajo = input("Ingrese el legajo de la persona: ")
@@ -34,11 +35,12 @@ class GestorZoo:
         nombre_instancia = em.Empleados(legajo,nombre,apellido, lista_animales_a_cuidar = [])
         lista_empleados.append(nombre_instancia)
         
-    
+    #funcion imprimir empleados
     def imprimir_empleados(self):
         for i in lista_empleados:
             i.presentarse()
 
+    #funcion imprimir animales
     def crear_intancia_animales(self):
         #self, nombre, tipo_animal, fecha_nacimiento, encargado_cuidar
         while True:
@@ -105,13 +107,23 @@ class GestorZoo:
                 if encargado_num == i.get_legajo():
                     i.asignar_animales(nombre_instancia)
 
-
+    #funcion imprimir animales
     def imprimir_animales(self):
         for i in lista_animales:
             i.presentar_animal()
             i.tipo_objeto()
 
-    def cambiar_de_encargado(self):
+    #funcion asignar animales (creo que esto lo hice en la funcion de arriba, no estoy segura)
+    def asignar_animal(self): #No me estaria dando cuenta como hacer para asignar un unico animal a cada empleado
+        self.imprimir_empleados
+        if len(lista_empleados) == 0:
+            print("La lista de empleados esta vacia. Por ")
+        elif len(lista_animales) == 0:
+            print("La lista de animales esta vacia. Por favor agregre datos.")
+        
+        
+    #funcion cambiar de encargado
+    def cambiar_de_encargado(self): #No lo puedo continuar si no termino la funcion anterior
         self.imprimir_empleados()
         while True:
             encar_cuidar = input("Ingrese el legajo del empleado a cambiar: ")
@@ -123,11 +135,5 @@ class GestorZoo:
                     flag = False
                     break
                 if (flag == True):
-                    
-                    """nuevo_encargado_cuidar = input(("Ingrese el Nº legajo por el que quiere cambiarlo"))
-                    for i in lista_animales:
-                        i.set_empleado(nuevo_encargado_cuidar)
-                        print("Cambio realizado")
-                        break
-                break"""
+                    pass
 
