@@ -89,4 +89,21 @@ while True:
     except:
         print("ERROR.")
 
-        
+import numpy as np
+
+a = np.array([[1, 2, 3], [4, 5, 6]])
+b = np.array([[1, 1], [2, 2], [3, 3]])
+print(a.dot(b))
+[[14 14]
+ [32 32]]
+
+print(a.T)
+[[1 4]
+ [2 5]
+ [3 6]]
+
+ Matriz_de_salarios
+[[176.   301.   340.  ]
+ [191.4  333.   343.2 ]
+ [213.6  313.28 333.  ]]
+Salario_Máximo:  343.2
