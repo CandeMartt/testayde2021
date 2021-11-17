@@ -89,13 +89,18 @@ class gestorTaxis:
         self.imprimir_info_choferes()
         while flag:
             chofer = input("ingrese el dni del chofer: ")
-            for i in lista_choferes:
-                if(chofer == i.get_dni()):
-                    flag = False
+            if (self.verificar_dni(chofer)):
+                for i in lista_choferes:
+                    if(chofer == i.get_dni()):
+                        flag = False
+            else:
+                print("error en el formato de dni")
         
         for i in lista_autos:
             if(patente == i.get_patente()):
-                i.set_chofer(chofer)   
+                i.set_chofer(chofer)
+                    
+ 
 
     def imprimir_lista(self):
         print(lista_choferes)

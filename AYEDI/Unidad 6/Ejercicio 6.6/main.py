@@ -39,7 +39,7 @@ Número: """
     elif (opcion=="2"):
         gestor.crear_instancia_auto()
     elif (opcion=="3"):
-        pass
+        gestor.modificar_chofer_auto()
     elif (opcion=="4"):
         pass
     elif (opcion=="5"):
