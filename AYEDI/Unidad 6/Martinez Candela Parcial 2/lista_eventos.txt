@@ -1,0 +1,13 @@
+Nombre del evento: Noche de rojo, Fecha: 12/12/2021, Hora: 21:15, Lugar: Villa Carlos Paz 
+Nombre del evento: Noche de blanco, Fecha: 12/11/2021, Hora: 21:20, Lugar: Cordoba 
+Nombre del evento: Noche de negro, Fecha: 12/01/2022, Hora: 21:30, Lugar: Cosquin 
+Nombre del evento: Noche de gala, Fecha: 12/11/2021, Hora: 21:23, Lugar: Villa Carlos Paz 
+Nombre del evento: Noche de mascaras , Fecha: 17/03/2022, Hora: 21:30, Lugar: Villa Carlos Paz 
+Nombre del evento: Casamiento , Fecha: 21/03/2022, Hora: 21:30, Lugar: La Falda 
+Nombre del evento: Almuerzo, Fecha: 21/02/2022, Hora: 21:30, Lugar: La Falda 
+Nombre del evento: Cena, Fecha: 12/3/2021, Hora: 12/03/2021, Lugar: La Falda 
+Nombre del evento: Te Ingl�s, Fecha: 12/03/2021, Hora: 18:30, Lugar: San Nicolas  
+Nombre del evento: Merienda, Fecha: 12/03/2022, Hora: 17:00, Lugar: San Nicolas 
+Nombre del evento: Desayuno, Fecha: 12/02/2022, Hora: 09:00, Lugar: Cordoba 
+Nombre del evento: Comida Italiana, Fecha: 12/12/2021, Hora: 12:30, Lugar: Cordoba 
+Nombre del evento: Comida Francesa, Fecha: 12/12/2021, Hora: 21:20, Lugar: Cordoba 
