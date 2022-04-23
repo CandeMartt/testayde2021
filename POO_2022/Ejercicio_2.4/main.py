@@ -18,9 +18,8 @@ pila.ver_pila()
 
 letra_a_reemplazar = input("Ingrese la letra que quiere reemplazar: ")
 letra_que_reemplaza = input("Ingrese la letra que la reemplazara: ")
-pila_aux =pi.Pila()
 
-pila_aux = pi.Pila()
+pila_aux =pi.Pila()
 
 for i in range(pila.get_tamanio()):
     elemento = pila.desapilar()

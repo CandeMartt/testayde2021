@@ -1,5 +1,5 @@
 class Rectangulo:
-     #  El `self` se pasa como parámetro de entrada del método. Es una variable que representa la instancia de la clase, y **deberá estar siempre ahí.**
+     #  El self` se pasa como parámetro de entrada del método. Es una variable que representa la instancia de la clase, y **deberá estar siempre ahí.**
     def __init__(self, base, altura):
         self.base = base
         self.altura = altura
