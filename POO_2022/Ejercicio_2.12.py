@@ -1,3 +1,10 @@
+#28/04/2022
+"""
+####Ejercicio 2.12
+Dada una lista de palabras, modificar el algoritmo de burbuja 
+para que ordene por el largo de estas.
+"""
+
 def burbuja_mejorado(lista):
   i=0
   control = True

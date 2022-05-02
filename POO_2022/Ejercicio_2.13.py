@@ -1,3 +1,9 @@
+#28/04/2022
+"""
+Ejercicio 2.13
+Dada una lista de objetos de una clase, modificar el algoritmo de 
+burbuja para que ordene por el atributo DNI de estas.
+"""
 class Persona:
     def __init__(self,dni,nombre,apellido):
         self.dni=dni
