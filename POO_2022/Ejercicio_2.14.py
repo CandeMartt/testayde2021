@@ -14,7 +14,7 @@ def seleccion(lista):
         minimo = j
         print(f"minimo: {lista[minimo]}")
       print(lista)
-      cont+=1
+    cont+=1
     lista[i],lista[minimo] = lista[minimo],lista[i]
 
   print(f"Cantidad de operaciones: {cont}")
@@ -22,3 +22,8 @@ def seleccion(lista):
 lista = ['b','a','c','f','e','d']
 seleccion(lista)
 print(lista)
+
+#sin función
+lista = ['b','a','c','f','e','d']
+lista_sorted = sorted(lista)
+print(lista_sorted)
