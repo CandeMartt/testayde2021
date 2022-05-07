@@ -10,7 +10,7 @@ def seleccion(lista):
   for i in range(0,len(lista)-1):
     minimo = i
     for j in range(i+1,len(lista)):
-      if(len(lista[j]) < len(lista[minimo])):
+      if(lista[j]) < (lista[minimo]):
         minimo = j
         print(f"minimo: {lista[minimo]}")
       print(lista)
@@ -24,6 +24,6 @@ seleccion(lista)
 print(lista)
 
 #sin función
-lista = ['b','a','c','f','e','d']
-lista_sorted = sorted(lista)
-print(lista_sorted)
+#lista = ['b','a','c','f','e','d']
+#lista_sorted = sorted(lista)
+#print(lista_sorted)
