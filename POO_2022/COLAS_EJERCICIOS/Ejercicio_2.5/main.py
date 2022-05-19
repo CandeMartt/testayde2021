@@ -26,9 +26,8 @@ while True:
         break
 for i in range(cola_1.get_tamano()):
     if i == numero-1:
-        print(f"Se elimino el elemento: {cola_1.desencolar()} ")
-        
+        print(f"Se elimino el elemento: {cola_1.desencolar()} ")    
     else:
-        cola_1.mover_al_final()
+        cola_1.encolar(cola_1.desencolar(-1))
 
 cola_1.ver_cola()

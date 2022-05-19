@@ -1,7 +1,7 @@
 #clase PILA
 class Pila:
     def __init__(self):
-      print("Crea una pila vacía.")
+      #print("Crea una pila vacía.")
       self.items=[]
     
     def apilar(self, x):
@@ -23,14 +23,16 @@ class Pila:
     def get_tamanio(self):
       return len(self.items)
 
-    def eliminar_impar(self):
-      pila_aux = []
-      while len(self.items)!= 0:
-          dato=self.items.pop()
-          if dato %2 == 0:
-              pila_aux.append(dato)
-      while len(pila_aux)!= 0:
-          self.items.append(pila_aux.pop())
-      print(self.items)
+    def eliminar_impar(self,pila):
+      pila_aux = Pila()
+      for i in range(pila.get_tamanio()):
+          dato=pila.desapilar()
+          if type(dato) == type(2) and dato%2 == 0: 
+            pila_aux.apilar(dato)
+          elif type(dato) == type('str'):
+            pila_aux.apilar(dato)
+      for i in range(pila_aux.get_tamanio()):
+          pila.apilar(pila_aux.desapilar())
+      print(pila)
                   
   
