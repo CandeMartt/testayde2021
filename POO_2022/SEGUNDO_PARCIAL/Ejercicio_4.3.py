@@ -39,5 +39,4 @@ ventana_1 = Ventana(persiana_1)
 puerta_1 = Puerta()
 calefactor_1 = Calefactor(28)
 casa = Casa(puerta_1,ventana_1,calefactor_1)
-
-casa.puerta.abrir()
+print(casa.puerta.abrir())
